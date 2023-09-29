@@ -1,0 +1,61 @@
+body{
+    /*font: oblique small-caps bold 12pt/14.4pt Arial, sans-serif*/
+    font: 12pt Arial, sans-serif;
+    color: black;
+    margin: auto;
+    width: 50%;
+    border: 2px solid silver;
+    padding: 10px 15%;
+    
+}
+.CentLink{
+    border: 1px solid white
+}
+th{
+    color: darkblue;
+    font-weight: 400;
+    Border: 2px solid silver;
+    border-collapse: collapse;
+}
+h1 {
+    color: black;
+    text-decoration: underline;
+    font-style: oblique;
+    text-align: center;
+}
+table{
+    width: 100%;
+    padding: 10px 25%;
+    Border: 2px solid silver;
+    border-collapse: collapse;
+}
+.center{
+    text-align: center;
+}
+
+.Acenter{
+    align-content: center;
+}
+
+
+
+
+
+
+/*
+#SQL {
+    color :red
+}
+*/
+.bold{
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+/*
+thead tr th {
+    color:aquamarine;
+    font-weight: 900;
+}
+*/
