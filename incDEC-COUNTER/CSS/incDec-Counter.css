@@ -1,0 +1,27 @@
+input{
+    max-width: 100px;
+    min-width: 100px;
+}
+button{
+    width: 35px;
+}
+
+
+.even{
+    color: red;
+}
+.evenBy3{
+    font-style: italic;
+}
+.evenBy7{
+    font-weight: bold;
+}
+.odd{
+    color: black;
+}
+.oddBy3{
+    font-style: none;
+}
+.oddBy7{
+    font-weight: 400;
+}
