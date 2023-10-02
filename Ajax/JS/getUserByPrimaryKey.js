@@ -1,5 +1,10 @@
 let users;
 
+const loaded = () => {
+    let URLdata = document.URL.split('?')[1]
+    let ID = +URLdata.split('=')[1]
+    getUserByPrimaryKey(ID)
+}
 const getUserByPrimaryKey = (inKey) =>{
 let http = new XMLHttpRequest();
 http.responseType = "json";

@@ -22,6 +22,11 @@ const display = (users) =>{
         tr+=`<td> ${u.phone} </td>`;
         tr+=`<td> ${u.isReviewer ? 'Yes':'No'} </td>`;
         tr+=`<td> ${u.isAdmin ? 'Yes':'No'} </td>`;
+        tr+=`<td>`
+        //let href = `getUserByPrimaryKey.html?id=${u.id}`
+        tr+= `<a href='getUserByPrimaryKey.html?id=${u.id}'>Detail</a> | `
+        tr+= `<a href='putUser.html?=${u.id}'>Edit</a>`
+        tr+=`</td>`
         tr += "</tr>";
 
         tbody.innerHTML+=tr;
