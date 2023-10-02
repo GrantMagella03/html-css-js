@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postuser</title>
+    <script src = "JS/postuserbyId.js"></script>
+</head>
+<body onload="loaded()">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Username</th>
+                    <th>Phone#</th>
+                    <th>Email</th>
+                    <th>Reviewer?</th>
+                    <th>Admin?</th>
+                </tr>
+            </thead>
+            <tbody id="UserTableBody">
+                <tr>
+                    <td>
+                        <input id="PID" type="text" value="0" disabled>
+                    </td>
+                    <td>
+                        <input id="PFirstName" type="text">
+                    </td>
+                    <td>
+                        <input id="PLastName" type="text">
+                    </td>
+                    <td>
+                        <input id="PUserName" type="text">
+                    </td>
+                    <td>
+                        <input id="PPhone#" type="text">
+                    </td>
+                    <td>
+                        <input id="PEmail" type="text">
+                    </td>
+                    <td>
+                        <input id="PReviewer" type="checkbox">
+                    </td>
+                    <td>
+                        <input id="PAdmin" type="checkbox">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <button onclick = "save()">SAVE</button>
+    </div>
+</body>
+</html>
+<!--
+
+
+
+-->
