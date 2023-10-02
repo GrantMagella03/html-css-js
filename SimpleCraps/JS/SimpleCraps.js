@@ -1,3 +1,8 @@
+const onLoad = () => {
+    console.log("loaded")
+}
+
+
 const button_click_play = () => {
     let nwins = 0;
     let nloss = 0;
@@ -5,6 +10,7 @@ const button_click_play = () => {
     let d1 = Math.ceil(Math.random()*6);
     let d2 = Math.ceil(Math.random()*6);
     let roll = d1+d2;
+    console.log(`debug: ${roll}`)
     if(roll === 7||roll === 11){
         DispStr = `${roll}`
         win(DispStr,nwins,nloss);
@@ -19,6 +25,7 @@ const button_click_play = () => {
             d1 = Math.ceil(Math.random()*6);
             d2 = Math.ceil(Math.random()*6);
             roll = d1+d2;
+            console.log(`debug: ${roll}`)
             if(roll === 7){
                 GameActive = false
                 DispStr = `${DispStr},${roll}`
@@ -30,7 +37,7 @@ const button_click_play = () => {
                 win(DispStr,nwins,nloss);
                 return;
             } else {
-                continue;
+                DispStr = `${DispStr},${roll}`
             }
 
         }
