@@ -31,16 +31,25 @@ const getUserByPrimaryKey = (inKey) =>{
 
 
 const putUser = (user) =>{
-let http = new XMLHttpRequest();
-http.responseType = "json";
-http.open("PUT",`http://localhost:5555/api/users/${user.id}`,true);
-http.setRequestHeader('Content-type', 'application/json')
-http.onload = function(){
-    console.log(http.response);
-    //display(http.response);
-}
-http.send(JSON.stringify(user));
-document.location = "getUsers.html"
+    $.ajax({
+        method: "PUT",
+        url: `http://localhost:5555/api/users/${user.id}`,
+        data: JSON.stringify(user),
+        contentType: "application/json"
+    
+    })
+    /*
+    let http = new XMLHttpRequest();
+    http.responseType = "json";
+    http.open("PUT",`http://localhost:5555/api/users/${user.id}`,true);
+    http.setRequestHeader('Content-type', 'application/json')
+    http.onload = function(){
+        console.log(http.response);
+        //display(http.response);
+    }
+    http.send(JSON.stringify(user));
+    document.location = "getUsers.html"
+    */
 }
 const display = (user) =>{
     document.getElementById("PID").value = user.id;
@@ -56,4 +65,5 @@ const display = (user) =>{
 const save = () => {
     let user = getDataFromHtml();
     putUser(user);
+    document.location = "getUsers.html";
 }

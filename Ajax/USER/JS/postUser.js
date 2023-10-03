@@ -19,6 +19,15 @@ const getDataFromHtml = () => {
 }
 
 const postUser = (user) =>{
+$.ajax({
+    method: "POST",
+    url: `http://localhost:5555/api/users/`,
+    data: JSON.stringify(user),
+    contentType: "application/json"
+
+})
+
+/*
 let http = new XMLHttpRequest();
 http.responseType = "json";
 http.open("POST",`http://localhost:5555/api/users/`,true);
@@ -28,6 +37,7 @@ http.onload = function(){
     //display(http.response);
 }
 http.send(JSON.stringify(user));
+*/
 
 }
 const display = (user) =>{
@@ -49,4 +59,5 @@ const display = (user) =>{
 const save = () => {
     let user = getDataFromHtml();
     postUser(user);
+    document.location = "getUsers.html";
 }
