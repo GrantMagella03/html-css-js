@@ -1,13 +1,21 @@
-$.ready();
-
+$(()=>{
+    let URLdata = document.URL.split('?')[1];
+    let ID = +URLdata.split('=')[1];
+    getUserByPrimaryKey(ID);
+    console.log("Ready")
+    $("#remove").on("click",()=>{
+        remove();
+    })
+});
 
 let users;
 let user = null;
+/*
 const loaded = () => {
-    let URLdata = document.URL.split('?')[1]
-    let ID = +URLdata.split('=')[1]
-    getUserByPrimaryKey(ID)
-}
+    let URLdata = document.URL.split('?')[1];
+    let ID = +URLdata.split('=')[1];
+    getUserByPrimaryKey(ID);
+}*/
 const getUserByPrimaryKey = (inKey) =>{
 let http = new XMLHttpRequest();
 http.responseType = "json";
