@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
+    <title>Vendors</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/AJAX.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <script src = "JS/putUser.js"></script>
+    <script src = "JS/postVendor.js"></script>
 </head>
 <body onload="loaded()">
     <div>
@@ -17,44 +17,44 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>FirstName</th>
-                    <th>LastName</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Phone#</th>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Phone</th>
                     <th>Email</th>
-                    <th>Reviewer?</th>
-                    <th>Admin?</th>
                 </tr>
             </thead>
-            <tbody id="UserTableBody">
+            <tbody id="VendorTableBody">
                 <tr>
                     <td>
-                        <input id="PID" type="text" disabled>
+                        <input id="PID" type="text" value="0" disabled>
                     </td>
                     <td>
-                        <input id="PFirstName" type="text">
+                        <input id="PCode" type="text">
                     </td>
                     <td>
-                        <input id="PLastName" type="text">
+                        <input id="PName" type="text">
                     </td>
                     <td>
-                        <input id="PUserName" type="text">
+                        <input id="PAddress" type="text">
                     </td>
                     <td>
-                        <input id="PPassword" type="password">
+                        <input id="PCity" type="text">
                     </td>
                     <td>
-                        <input id="PPhone#" type="text">
+                        <input id="PState" type="text">
+                    </td>
+                    <td>
+                        <input id="PZip" type="text">
+                    </td>
+                    <td>
+                        <input id="PPhone" type="text">
                     </td>
                     <td>
                         <input id="PEmail" type="text">
-                    </td>
-                    <td>
-                        <input id="PReviewer" type="checkbox">
-                    </td>
-                    <td>
-                        <input id="PAdmin" type="checkbox">
                     </td>
                 </tr>
             </tbody>
