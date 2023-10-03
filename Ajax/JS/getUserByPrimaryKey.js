@@ -1,5 +1,5 @@
 let users;
-
+let user = null;
 const loaded = () => {
     let URLdata = document.URL.split('?')[1]
     let ID = +URLdata.split('=')[1]
@@ -10,6 +10,7 @@ let http = new XMLHttpRequest();
 http.responseType = "json";
 http.open("get",`http://localhost:5555/api/users/${inKey}`,true);
 http.onload = function(){
+    user = http.response;
     console.log(http.response);
     display(http.response);
 }
@@ -33,4 +34,16 @@ const rng1 = () =>{
     let x=1;
     x = Math.ceil(((Math.random()*3)));
     return x;
+}
+const remove = () =>{
+    let http = new XMLHttpRequest();
+    http.responseType = "json";
+    http.open("Delete",`http://localhost:5555/api/users/${user.id}`,true);
+    http.onload = function(){
+    user = http.response;
+    console.log(http.response);
+    //display(http.response);
+    }
+    http.send();
+    document.location = "getUsers.html";
 }

@@ -40,7 +40,7 @@ http.onload = function(){
     //display(http.response);
 }
 http.send(JSON.stringify(user));
-
+document.location = "getUsers.html"
 }
 const display = (user) =>{
     document.getElementById("PID").value = user.id;
