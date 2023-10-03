@@ -1,3 +1,6 @@
+$.ready();
+
+
 let users;
 let user = null;
 const loaded = () => {
