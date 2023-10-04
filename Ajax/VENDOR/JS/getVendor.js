@@ -7,7 +7,7 @@ $(()=>{
         remove(ID);
     })
 });
-
+// use .hide to hide stuff
 let users;
 let user = null;
 const getVendor = (inKey) =>{
